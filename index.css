@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    color: #18518B;
+}
+body{
+    background-color: #F8F9FA;
+}
+#mainHeader{
+    color: #006535;
+    display: block;
+    text-align: center;
+    padding: 1.3em;
+    font-size: 4em;
+}
+ul{
+    background-color: #F79C0F;
+    display: block;
+    padding: 1em;
+    margin: 0;
+}
+
+li{
+    display: inline;
+    padding: 2em;
+}
+
+a{
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: #8EA604;
+    transition: color 0.5s;
+}
+
+#inputButton{
+    background-color: #8EA604;
+    color: white;
+    height: 30px;
+    width: 60px;
+    border: 1px solid black;
+}
+#inputs{
+    padding-top: 1em;
+    font-size: 0.8em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+#addNew{
+    padding: 4em;
+}
+#nuweKultivar{
+    padding-left: 0.2em;
+    font-size: 0.8em;
+   
+}
+#nuweKultivarButton{
+    background-color: #8EA604;
+    color: white;
+    margin-left: 5px;
+    height: 2em;
+    width: 2em;
+    text-align: center;
+    border: 1px solid black;
+    
+}
+
+#nuweKultivarButton:hover,#inputButton:hover, .addToHistoryToggle:hover{
+    background-color: #F79C0F;
+    transition: background-color 1s;
+} 
+
+.fruitInput{
+    padding: 0.2em;
+    margin: 1em;
+}
+.fruitData{
+    display: none;
+    padding:2em;
+}
+#kultivarOptions{
+    width: 13em;
+    height: 2em;
+}
+/* Shows when something is added */
+.fruitDataDisplay{
+    padding-top: 3em;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Added html through javascript */
+#data{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.addedData{
+    height: 3em;
+    text-align: center;
+    border-top: 1px solid  #8EA604;
+    border-bottom:1px solid  #8EA604;
+    padding-top: 1.2em;
+    
+}
+/* Button for removing added items */
+#removeButton{
+    background-color: lightcoral;
+    float: right;
+    height: 2.5em;
+    width: 3em;
+    margin-right: 1em;
+    
+}
+/* Activates when there is something displayd in table */
+.addButton{
+    display: none;
+}
+.addToHistoryToggle{
+    margin: 0 auto;
+    display: block;
+    margin-top: 4em;
+    height: 2em;
+    width: 12em;
+    background-color:  #8EA604;
+    color: white;
+    border: 1px solid black;
+    font-size: larger;
+}

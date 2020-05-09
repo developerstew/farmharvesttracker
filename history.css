@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    color: #18518B;
+}
+#mainHeader{
+    color: #006535;
+    display: block;
+    text-align: center;
+    padding: 1.3em;
+    font-size: 4em;
+}
+ul{
+    background-color: orange;
+    display: block;
+    padding: 1.5em;
+    margin: 0;
+}
+
+li{
+    display: inline;
+    padding: 2em;
+}
+
+a{
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: #8EA604;
+    transition: color 0.5s;
+}
+.fruitDataDisplay{
+    padding-top: 3em;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3em;
+}
+#data{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+#plukText{
+    padding-left: 2em;
+    padding-top: 2em;
+}
+.addedData{
+    height: 1.5em;
+    text-align: center;
+    border-top: 1px solid  #8EA604;
+    border-bottom:1px solid  #8EA604;
+    text-align: center;
+    font-size: 2em;
+}
+.addedOpsom{
+    height: 1.5em;
+    text-align: center;
+    border-top: 1px solid  #8EA604;
+    border-bottom:1px solid  #8EA604;
+    text-align: center;
+    font-size: 2em;
+}
+#historyPlaceHolder, #historyPlaceHolder2{
+    padding: 2em;
+}
+#opsommingText{
+    padding-left: 2em;
+    padding-top: 2em;
+}
+.opsomHeadings{
+    margin: 0 auto;
+    text-align: center;
+    text-align: center;
+    border-bottom: 2px solid #F79C0F;
+    width: 2em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+/* .addedOpsom{
+    
+} */
+.opsomData{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+}
+#opsomHeadings2{
+    margin-left: 8em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+}
