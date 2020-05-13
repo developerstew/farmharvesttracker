@@ -3,41 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./index.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
     <title>Fruit Database</title>
 </head>
 <body>
-    <h1 id="mainHeader">Vrug totale</h1>
-    <ul>
-        <li><a href="">Huis</a> </li>
-        <li><a href="./history.html">Geskiedenis</a></li>
-    </ul>
-    <form id="addNew" >
-        <h2>Voeg nuwe by:</h2>
-        <br>
-        <div id="nuweKultivar">
-            Nuwe kultivar
-            <input type="text">
-            <button id="nuweKultivarButton">+</button>
+        <h1 id="mainHeader">Vrug totale</h1>
+        <ul class="nav">
+              <a class="nav-link active" href="./index.html">Huis</a> 
+              <a class="nav-link" href="./history.html">Geskiedenis</a>
+          </ul>
+          <form id="addNew" >
+              <br>
+              <div class="container">
+            <h2 id='voegByText'>Voeg nuwe by:</h2>
+            <div class="form-group">
+              <label for="Datum">Datum</label>
+              <input type="date" required class="fruitInput" >
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="exampleFormControlSelect2">Kultivar</label>
+                        <select class="custom-select fruitInput" id="kultivarOptions">
+                        <!-- Code added here by user -->
+                        <option selected>Kies kultivar</option>
+                        </select>
+                    </div>
+                    <div class="col-3" id="nuweKultivar">
+                        <label for="nuweKultivar">Nuwe Kultivar</label>
+                        <input type="text" class="form-control" id="nuweKultivarInput" placeholder="">
+                        <button id="nuweKultivarButton" type="button" class="btn btn-success">+</button>
+                    </div> 
+                    </div>
+                </div>
+            <div class="form-group">
+                <label for="ha">h/a</label>
+                <input type="number" class="form-control fruitInput" id="" placeholder="1, 2 ens..">
+            </div>
+            <div class="form-group">
+                <label for="blokNommer">Blok Nommer</label>
+                <input type="text" class="form-control fruitInput" id="blokInput" placeholder="C1, C2, 1,2">
+            </div>
+            <div class="form-group">
+                <label for="totaleBins">Total Bins Gepluk</label>
+                <input type="number" class="form-control fruitInput" id="" placeholder="1, 2 ens..">
+            </div>
+            <button type="submit" id="inputButton" class="btn btn-success">Voeg By</button>
         </div>
-        <div id="inputs">
-            Datum
-            <input type="date" required class="fruitInput" >
-            Kultivar
-            <select name="" id="kultivarOptions" class="fruitInput">
-            </select>
-            h/a
-            <input type="number" class="fruitInput" placeholder="1, 2 ens..">
-            Blok nommer
-            <input type="text" required class="fruitInput" id="blokInput" placeholder="C1, C2, 1,2">
-            Totale Bins
-            <input type="number" required class="fruitInput" placeholder="1, 2 ens..">
-            <button type="submit" id="inputButton" >Voeg By</button>
-        </div>
-    </form>
-    
+          </form>
+
     <!-- Use grid to display inline -->
+    <div class="container-fluid">
     <div id="fruitData" class="fruitData">
             <h2 id="datum" class="fruitInfo">Datum</h2>
             <h2 id="kultivar" class="fruitInfo">Kultivar</h2>
@@ -50,8 +68,12 @@
 
     </div>
     <button id="addToHistory" class="addButton">Voeg by Geskiedenis by!</button>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./history.js"></script>
     <script src="./index.js"></script>
-    
 </body>
 </html>

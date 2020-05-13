@@ -15,16 +15,7 @@ body{
 }
 ul{
     background-color: #F79C0F;
-    display: block;
-    padding: 1em;
-    margin: 0;
 }
-
-li{
-    display: inline;
-    padding: 2em;
-}
-
 a{
     font-size: 2em;
     color: white;
@@ -34,37 +25,29 @@ a:hover{
     color: #8EA604;
     transition: color 0.5s;
 }
-
+#voegByText{
+    padding: 1em 0em;
+}
 #inputButton{
     background-color: #8EA604;
     color: white;
-    height: 30px;
-    width: 60px;
+    height: 40px;
+    width: 6em;
     border: 1px solid black;
 }
-#inputs{
-    padding-top: 1em;
-    font-size: 0.8em;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-#addNew{
-    padding: 4em;
-}
-#nuweKultivar{
-    padding-left: 0.2em;
-    font-size: 0.8em;
-   
+#nuweKultivarInput{
+   width: 10em;
+   height: 2em;
+   display: inline-block;
 }
 #nuweKultivarButton{
     background-color: #8EA604;
     color: white;
-    margin-left: 5px;
-    height: 2em;
+    height: 1.8em;
     width: 2em;
     text-align: center;
     border: 1px solid black;
-    
+    margin-bottom: 5px;
 }
 
 #nuweKultivarButton:hover,#inputButton:hover, .addToHistoryToggle:hover{
@@ -72,17 +55,22 @@ a:hover{
     transition: background-color 1s;
 } 
 
-.fruitInput{
-    padding: 0.2em;
-    margin: 1em;
-}
 .fruitData{
     display: none;
     padding:2em;
 }
+@media screen and (max-width: 1000px){
+    .fruitInfo{
+        font-size: 80%;
+    }
+    #nuweKultivar{
+        margin-left: 8em;
+        display: flex;
+    }
+}
 #kultivarOptions{
     width: 13em;
-    height: 2em;
+    height: auto;
 }
 /* Shows when something is added */
 .fruitDataDisplay{
@@ -104,15 +92,16 @@ a:hover{
     border-top: 1px solid  #8EA604;
     border-bottom:1px solid  #8EA604;
     padding-top: 1.2em;
-    
+    position: relative;
 }
 /* Button for removing added items */
 #removeButton{
     background-color: lightcoral;
-    float: right;
+    position: absolute;
     height: 2.5em;
     width: 3em;
-    margin-right: 1em;
+    right: 0;
+    top: 2px;
     
 }
 /* Activates when there is something displayd in table */

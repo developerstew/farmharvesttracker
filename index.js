@@ -26,8 +26,9 @@ function loadKultivars(){
     if(kultivars.length > 0){
         for(let data in kultivars){
             let element = document.createElement('option');
-            let newKultivar =document.createTextNode(kultivars[data]) 
+            let newKultivar =document.createTextNode(kultivars[data]); 
             element.appendChild(newKultivar)
+            element.value = kultivars[data]
             kultivarOptions.appendChild(element)
         }
     }
