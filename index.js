@@ -18,23 +18,23 @@ function FruitTotal(datum,kultivar,ha,blokNommer,bins, year){
     this.bins = Number(bins);
     this.year = year;
 }
+
 function loadKultivars(){
-    let kultivars = JSON.parse(localStorage.getItem('kultivars'))
+    kultivars = JSON.parse(localStorage.getItem('kultivars'))
     if(kultivars === null){
         kultivars = []
     }
-    if(kultivars.length > 0){
-        for(let data in kultivars){
-            let element = document.createElement('option');
-            let newKultivar =document.createTextNode(kultivars[data]); 
-            element.appendChild(newKultivar)
-            element.value = kultivars[data]
-            kultivarOptions.appendChild(element)
-        }
-    }
 }
 loadKultivars()
-
+function displayKultivars(){
+    kultivarsInStorage = '';
+    for(data in kultivars){
+        kultivarsInStorage += 
+        "<option>" + kultivars[data] + "</option>"
+        kultivarOptions.innerHTML = kultivarsInStorage
+    }
+}
+displayKultivars()
 //Runs data through constructor and saves in array as well as localstorage
 function addData(datum,kultivar,ha,blokNommer,bins, year){
     let fruit = new FruitTotal(datum,kultivar,ha,blokNommer,bins, year);
@@ -70,15 +70,20 @@ function displayData(){
     }
  
 }
-
+// kultivars = [d]
 
 nuweKultivarButton.addEventListener('click', (event) =>{
-    kultivars = [...kultivars, nuweKultivarButton.previousElementSibling.value.toLowerCase()]
-    console.log(kultivars)
-    localStorage.setItem('kultivars',JSON.stringify(kultivars))
-    loadKultivars()
-    alert('Gevoeg by kultivars')
-    event.preventDefault()
+    if(kultivars.includes(nuweKultivarInput.value)){
+        alert('kultivar alreeds op lys!')
+    }else{
+        console.log(kultivars)
+        kultivars = [...kultivars, nuweKultivarInput.value.toLowerCase()]
+        localStorage.setItem('kultivars',JSON.stringify(kultivars))
+        kultivars = [];
+        alert('Gevoeg by kultivars')
+        loadKultivars()
+        displayKultivars()
+    }
 })
 // Get input values and send to addData function
 inputButton.addEventListener('click', (event) =>{
@@ -86,6 +91,7 @@ inputButton.addEventListener('click', (event) =>{
   const patterns = {
       blok: /^[c,C]?[0-9]+$/
   }
+  
     for(let info in fruitDetails){
         if((fruitDetails)[info].value.length === 0){
             alert("Vul asb alles in!");
